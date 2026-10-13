@@ -96,8 +96,7 @@ CREATE TABLE IF NOT EXISTS imagenes (
 );
 
 -- Relación N:M usuario-producto (reseña). PK sustituta porque
--- embeddings_texto la referencia. Regla de negocio (trigger o
--- aplicación): solo reseña quien compró el producto.
+-- embeddings_texto la referencia.
 CREATE TABLE IF NOT EXISTS resenas (
     id_resena    INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario   INT NOT NULL REFERENCES usuarios(id_usuario),
